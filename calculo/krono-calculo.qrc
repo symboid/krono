@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/Symboid/Krono/Calculo">
+        <file>qmldir</file>
+    </qresource>
+    <qresource prefix="/"/>
+    <qresource prefix="/tr">
+        <file>krono-calculo_hu.qm</file>
+    </qresource>
+</RCC>
