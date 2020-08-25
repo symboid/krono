@@ -5,11 +5,22 @@ COMPONENT_NAME=krono
 include($${BUILD_ROOT}/sdk/build/qmake/qt-module.pri)
 
 SOURCES += \
-    init.cc
+    emotspace.cc \
+    init.cc \
+    intlspace.cc \
+    kronoscope.cc \
+    phisspace.cc \
+    qkronosummary.cc
 
 HEADERS += \
     defs.h \
+    emotspace.h \
     init.h \
+    intlspace.h \
+    kronoscope.h \
+    kronospace.h \
+    phisspace.h \
+    qkronosummary.h \
     setup.h
 
 RESOURCES += \

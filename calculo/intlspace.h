@@ -1,0 +1,30 @@
+
+#ifndef __SYMBOID_KRONO_CALCULO_INTLSPACE_H__
+#define __SYMBOID_KRONO_CALCULO_INTLSPACE_H__
+
+#include "krono/calculo/defs.h"
+#include "krono/calculo/kronospace.h"
+
+enum IntlType
+{
+    INSPIRED    = 0x01,
+    THOUGHTFULL = 0x02,
+
+    TECHNICAL   = 0x10,
+    MIXED       = 0x20,
+    PRODUCTIVE  = 0x30,
+
+    WORKER      = TECHNICAL | THOUGHTFULL,
+    ARTIST      = TECHNICAL | INSPIRED,
+
+    ENGINEER    = PRODUCTIVE | THOUGHTFULL,
+    VISIONARY   = PRODUCTIVE | INSPIRED,
+    STRATEGIST  = PRODUCTIVE | INSPIRED | THOUGHTFULL,
+
+    HARMONIC    = MIXED | INSPIRED | THOUGHTFULL,
+    PHILOSOPHER = MIXED | THOUGHTFULL,
+};
+
+typedef KronoSpace<IntlType, 33> IntlSpace;
+
+#endif // __SYMBOID_KRONO_CALCULO_INTLSPACE_H__
