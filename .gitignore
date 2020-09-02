@@ -4,3 +4,4 @@
 *.qm
 component.json
 component.h
+*/module.h
