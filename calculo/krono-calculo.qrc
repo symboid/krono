@@ -6,4 +6,7 @@
     <qresource prefix="/tr">
         <file>krono-calculo_hu.qm</file>
     </qresource>
+    <qresource prefix="/picture">
+        <file>manshape.jpg</file>
+    </qresource>
 </RCC>

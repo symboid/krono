@@ -10,6 +10,8 @@ SOURCES += \
     intlspace.cc \
     kronoscope.cc \
     phisspace.cc \
+    qkronopuppetitem.cc \
+    qkronoscope.cc \
     qkronosummary.cc
 
 HEADERS += \
@@ -20,6 +22,8 @@ HEADERS += \
     kronoscope.h \
     kronospace.h \
     phisspace.h \
+    qkronopuppetitem.h \
+    qkronoscope.h \
     qkronosummary.h \
     setup.h
 

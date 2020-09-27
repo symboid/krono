@@ -5,6 +5,8 @@
 #include "krono/calculo/defs.h"
 #include "sdk/arch/modqt.h"
 #include "sdk/controls/init.h"
+#include "krono/calculo/qkronoscope.h"
+#include "krono/calculo/qkronopuppetitem.h"
 
 struct KRONO_CALCULO_API mod_krono_calculo : arh::mod_qt<mod_krono_calculo>
 {
@@ -18,6 +20,9 @@ struct KRONO_CALCULO_API mod_krono_calculo : arh::mod_qt<mod_krono_calculo>
     ~mod_krono_calculo();
 
     arh::mod_init<mod_sdk_controls> _M_mod_sdk_controls;
+    qml_type_register<QKronoContour> _M_reg_krono_contour;
+    qml_type_register<QKronoScope> _M_reg_krono_scope;
+    qml_type_register<QKronoPuppetItem> _M_reg_krono_puupet_item;
 };
 
 #endif // __SYMBOID_KRONO_CALCULO_INIT_H__

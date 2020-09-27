@@ -6,8 +6,8 @@
 
 struct ContourTabular
 {
-    double mCapacity;
-    double mEmission;
+    int mCapacity;
+    int mEmission;
 };
 
 template <typename ContourType>
