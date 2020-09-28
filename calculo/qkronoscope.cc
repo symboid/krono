@@ -136,11 +136,17 @@ QKronoScope::QKronoScope(QObject* parent)
     , m_phisContour(new QPhisContour(this))
     , m_emotContour(new QEmotContour(this))
     , m_intlContour(new QIntlContour(this))
+    , m_maskContour(new QPhisContour(this))
     , mKronoScope(m_year,m_month,m_day)
 {
     connect(this, SIGNAL(yearChanged()), this, SLOT(onDateChanged()));
     connect(this, SIGNAL(monthChanged()), this, SLOT(onDateChanged()));
     connect(this, SIGNAL(dayChanged()), this, SLOT(onDateChanged()));
+}
+
+int QKronoScope::rootSum() const
+{
+    return mKronoScope.rootSum();
 }
 
 void QKronoScope::onDateChanged()
@@ -158,4 +164,11 @@ void QKronoScope::onDateChanged()
     m_intlContour->set_marker(mKronoScope.intlContour().mMarker);
     m_intlContour->set_capacity(mKronoScope.intlContour().mCapacity);
     m_intlContour->set_emission(mKronoScope.intlContour().mEmission);
+
+    Contour<PhisType> mask = mKronoScope.mask();
+    m_maskContour->set_marker(mask.mMarker);
+    m_maskContour->set_capacity(mask.mCapacity);
+    m_maskContour->set_emission(mask.mEmission);
+
+    emit rootSumChanged();
 }

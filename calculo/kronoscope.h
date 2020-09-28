@@ -43,7 +43,7 @@ public:
 
 public:
     Contour<PhisType> mask() const;
-    double rootSum() const;
+    int rootSum() const;
 };
 
 #endif // __SYMBOID_KRONO_CALCULO_KRONOSCOPE_H__

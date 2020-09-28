@@ -98,6 +98,12 @@ public:
     PROPERTY_MEMBER(QKronoContour*, phisContour)
     PROPERTY_MEMBER(QKronoContour*, emotContour)
     PROPERTY_MEMBER(QKronoContour*, intlContour)
+    PROPERTY_MEMBER(QKronoContour*, maskContour)
+
+    Q_PROPERTY(int rootSum READ rootSum NOTIFY rootSumChanged)
+    int rootSum() const;
+signals:
+    void rootSumChanged();
 
 private:
     KronoScope mKronoScope;

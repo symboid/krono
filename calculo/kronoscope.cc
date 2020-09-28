@@ -51,7 +51,7 @@ Contour<PhisType> KronoScope::mask() const
     return mPhisSpace.match(aggregated);
 }
 
-double KronoScope::rootSum() const
+int KronoScope::rootSum() const
 {
     const Contour<PhisType> phisContour = this->phisContour();
     const Contour<EmotType> emotContour = this->emotContour();
