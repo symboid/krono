@@ -2,7 +2,7 @@
 TARGET = krono-calculo
 BUILD_ROOT=../..
 COMPONENT_NAME=krono
-include($${BUILD_ROOT}/sdk/build/qmake/qt-module.pri)
+include($${BUILD_ROOT}/build/qmake/qt-module.pri)
 
 SOURCES += \
     emotspace.cc \

@@ -2,7 +2,7 @@
 TARGET = krono-app
 BUILD_ROOT=../..
 COMPONENT_NAME=krono
-include($${BUILD_ROOT}/sdk/build/qmake/application.pri)
+include($${BUILD_ROOT}/build/qmake/application.pri)
 
 SOURCES += \
     main.cc
