@@ -30,5 +30,5 @@ HEADERS += \
 RESOURCES += \
     krono-calculo.qrc
 
-LIBS += $$moduleDep(sdk,arch)
-LIBS += $$moduleDep(sdk,controls)
+LIBS += $$externDep(sdk,arch)
+LIBS += $$externDep(sdk,controls)

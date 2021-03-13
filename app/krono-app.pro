@@ -16,17 +16,17 @@ RESOURCES += \
     krono-app.qrc
 
 LIBS += $$moduleDep(krono,calculo)
-LIBS += $$moduleDep(sdk,hosting)
-LIBS += $$moduleDep(sdk,controls)
-LIBS += $$moduleDep(sdk,network)
-LIBS += $$moduleDep(sdk,arch)
+LIBS += $$externDep(sdk,hosting)
+LIBS += $$externDep(sdk,controls)
+LIBS += $$externDep(sdk,network)
+LIBS += $$externDep(sdk,arch)
 
 android: {
-    ANDROID_EXTRA_LIBS += $$androidModuleBuildPath(sdk,arch)
-    ANDROID_EXTRA_LIBS += $$androidModuleBuildPath(sdk,network)
-    ANDROID_EXTRA_LIBS += $$androidModuleBuildPath(sdk,controls)
-    ANDROID_EXTRA_LIBS += $$androidModuleBuildPath(sdk,hosting)
-    ANDROID_EXTRA_LIBS += $$androidModuleBuildPath(krono,calculo)
+    ANDROID_EXTRA_LIBS += $$externPath(sdk,arch)
+    ANDROID_EXTRA_LIBS += $$externPath(sdk,network)
+    ANDROID_EXTRA_LIBS += $$externPath(sdk,controls)
+    ANDROID_EXTRA_LIBS += $$externPath(sdk,hosting)
+    ANDROID_EXTRA_LIBS += $$externPath(krono,calculo)
 }
 
 QMAKE_EXTRA_TARGETS += $$object_dep_on_component_header(main)
